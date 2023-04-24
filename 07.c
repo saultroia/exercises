@@ -1,60 +1,60 @@
-/* ExercÌcio 7: Escreva um programa que leia a idade de uma pessoa
-   e imprima se ela È maior ou menor de idade. */
+/* Exerc√≠cio 7: Escreva um programa que leia a idade de uma pessoa
+   e imprima se ela √© maior ou menor de idade. */
    
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÁıes 
-	externas ser„o utilizadas. No caso particular, tais especificaÁıes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extens„o .h para indicar que se trata de um "header file") em um diretÛrio conhecido pelo compilador. 
-	O nome de tal arquivo È delimitado pelos sÌmbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especifica√ß√µes 
+	externas ser√£o utilizadas. No caso particular, tais especifica√ß√µes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extens√£o .h para indicar que se trata de um "header file" em um diret√≥rio conhecido pelo compilador. 
+	O nome de tal arquivo √© delimitado pelos s√≠mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* FunÁ„o principal iniciada em main(), na linha 17. Na linha 18, a funÁ„o setlocale refere-se ‡ localidade (paÌs/regi„o e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que È usada para definir algumas ou todas as informaÁıes 
-	de localidade do mesmo. O idioma usado È o PortuguÍs padr„o. Na linha 19, a declaraÁ„o de trÍs vari·veis do tipo int: idade, maior e menor. */
+/* Fun√ß√£o principal iniciada em main(), na linha 17. Na linha 18, a fun√ß√£o setlocale refere-se √† localidade (pa√≠s/regi√£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que √© usada para definir algumas ou todas as informa√ß√µes 
+	de localidade do mesmo. O idioma usado √© o Portugu√™s padr√£o. Na linha 19, a declara√ß√£o de tr√™s vari√°veis do tipo int: idade, maior e menor. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int idade, maior, menor;
 	
-	/* SolicitaÁ„o e atribuiÁ„o de valor ‡ vari·vel idade por meio das funÁıes printf (que traduz a representaÁ„o interna de vari·veis 
-		para a representaÁ„o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari·vel que deve receber o valor 
-		convertido a partir dos caracteres do fluxo de entrada. Antes da solicitaÁ„o, usa-se o caractere de nova linha (\n), ou seja, 
-		a prÛxima saÌda para a tela acontece na linha seguinte. */
+	/* Solicita√ß√£o e atribui√ß√£o de valor √† vari√°vel idade por meio das fun√ß√µes printf (que traduz a representa√ß√£o interna de vari√°veis 
+		para a representa√ß√£o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari√°vel que deve receber o valor 
+		convertido a partir dos caracteres do fluxo de entrada. Antes da solicita√ß√£o, usa-se o caractere de nova linha (\n), ou seja, 
+		a pr√≥xima sa√≠da para a tela acontece na linha seguinte. */
 	
 	printf("\nInforme a sua idade: ");
 	scanf("%d", &idade);
 	
-	/* O comando if È utilizado para especificar um bloco de cÛdigo a ser executado se uma condiÁ„o for verdadeira. 
-		Usamos a vari·vel idade para testar se o valor atribuÌdo a ela È maior ou igual a 0 e menor que 18. 
-		Se a condiÁ„o for verdadeira, imprimimos na tela "Menor de idade.". */
+	/* O comando if √© utilizado para especificar um bloco de c√≥digo a ser executado se uma condi√ß√£o for verdadeira. 
+		Usamos a vari√°vel idade para testar se o valor atribu√≠do a ela √© maior ou igual a 0 e menor que 18. 
+		Se a condi√ß√£o for verdadeira, imprimimos na tela "Menor de idade.". */
 	
 	if(idade >= 0 && idade < 18){
 		printf("\nMenor de idade.\n\n");
 	}
 	
-	/* Da mesma forma, usamos a vari·vel idade para testar se o valor atribuÌdo a ela È maior ou igual a 18. 
-		Se a condiÁ„o for verdadeira, imprimimos na tela "Maior de idade.". */
+	/* Da mesma forma, usamos a vari√°vel idade para testar se o valor atribu√≠do a ela √© maior ou igual a 18. 
+		Se a condi√ß√£o for verdadeira, imprimimos na tela "Maior de idade.". */
 	
 	if(idade >= 18){
 		printf("\nMaior de idade.\n\n");
 	}
 	
-	/* Por fim, usamos a vari·vel idade para testar se o valor atribuÌdo a ela È menor que 0. 
-		Se a condiÁ„o for verdadeira, imprimimos na tela "Idade inv·lida!". */
+	/* Por fim, usamos a vari√°vel idade para testar se o valor atribu√≠do a ela √© menor que 0. 
+		Se a condi√ß√£o for verdadeira, imprimimos na tela "Idade inv√°lida!". */
 	
 	if(idade < 0){
-		printf("\nIdade inv·lida!\n\n");
+		printf("\nIdade inv√°lida!\n\n");
 	}
 	
-	/* O comando system("pause") È necess·rio no ambiente Windows para pausar a tela. 
-		O comando return causa o tÈrmino da execuÁ„o do programa. 
-		Se o valor retornado for zero, ent„o isto indica que a execuÁ„o terminou em condiÁıes normais. */
+	/* O comando system("pause") √© necess√°rio no ambiente Windows para pausar a tela. 
+		O comando return causa o t√©rmino da execu√ß√£o do programa. 
+		Se o valor retornado for zero, ent√£o isto indica que a execu√ß√£o terminou em condi√ß√µes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da funÁ„o principal, significa fim do programa. */
+  	/* Chave fechando o corpo da fun√ß√£o principal, significa fim do programa. */
 }
