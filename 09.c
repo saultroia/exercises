@@ -1,52 +1,52 @@
-/* Exercício 9: Crie um programa que leia um número inteiro 
-   e imprima a tabuada desse número. */
+/* ExercÃ­cio 9: Crie um programa que leia um nÃºmero inteiro 
+   e imprima a tabuada desse nÃºmero. */
    
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificações 
-	externas serão utilizadas. No caso particular, tais especificações se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extensão .h para indicar que se trata de um "header file") em um diretório conhecido pelo compilador. 
-	O nome de tal arquivo é delimitado pelos símbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÃ§Ãµes 
+	externas serÃ£o utilizadas. No caso particular, tais especificaÃ§Ãµes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extensÃ£o .h para indicar que se trata de um "header file" em um diretÃ³rio conhecido pelo compilador. 
+	O nome de tal arquivo Ã© delimitado pelos sÃ­mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* Função principal iniciada em main(), na linha 17. Na linha 18, a função setlocale refere-se à localidade (país/região e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que é usada para definir algumas ou todas as informações 
-	de localidade do mesmo. O idioma usado é o Português padrão. Na linha 19, a declaração de duas variáveis do tipo int: tabuada (com valor inicial igual a 0) e i. */
+/* FunÃ§Ã£o principal iniciada em main(), na linha 17. Na linha 18, a funÃ§Ã£o setlocale refere-se Ã  localidade (paÃ­s/regiÃ£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que Ã© usada para definir algumas ou todas as informaÃ§Ãµes 
+	de localidade do mesmo. O idioma usado Ã© o PortuguÃªs padrÃ£o. Na linha 19, a declaraÃ§Ã£o de duas variÃ¡veis do tipo int: tabuada (com valor inicial igual a 0) e i. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int tabuada = 0, i;
 	
-	/* Solicitação e atribuição de valor à variável tabuada por meio das funções printf (que traduz a representação interna de variáveis 
-		para a representação ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da variável que deve receber o valor 
-		convertido a partir dos caracteres do fluxo de entrada. Antes da solicitação, usa-se o caractere de nova linha (\n), ou seja, 
-		a próxima saída para a tela acontece na linha seguinte. */
+	/* SolicitaÃ§Ã£o e atribuiÃ§Ã£o de valor Ã  variÃ¡vel tabuada por meio das funÃ§Ãµes printf (que traduz a representaÃ§Ã£o interna de variÃ¡veis 
+		para a representaÃ§Ã£o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da variÃ¡vel que deve receber o valor 
+		convertido a partir dos caracteres do fluxo de entrada. Antes da solicitaÃ§Ã£o, usa-se o caractere de nova linha (\n), ou seja, 
+		a prÃ³xima saÃ­da para a tela acontece na linha seguinte. */
 		
-	printf("\nDigite um número para imprimir a tabuada: ");
+	printf("\nDigite um nÃºmero para imprimir a tabuada: ");
 	scanf("%d", &tabuada);
 	
-	/* No comando de repetição for a instrução de inicialização é executada apenas uma vez. Em seguida, a expressão de teste é avaliada. 
-		Se a expressão de teste for avaliada como falsa, o loop for será finalizado. No entanto, se a expressão de teste for avaliada como verdadeira, 
-		as instruções dentro do corpo do loop for serão executadas e a expressão de atualização será atualizada. 
-		Novamente a expressão de teste é avaliada. O processo continua até que a expressão de teste seja falsa. 
-		Quando a expressão de teste é falsa, o loop termina. 
+	/* No comando de repetiÃ§Ã£o for a instruÃ§Ã£o de inicializaÃ§Ã£o Ã© executada apenas uma vez. Em seguida, a expressÃ£o de teste Ã© avaliada. 
+		Se a expressÃ£o de teste for avaliada como falsa, o loop for serÃ¡ finalizado. No entanto, se a expressÃ£o de teste for avaliada como verdadeira, 
+		as instruÃ§Ãµes dentro do corpo do loop for serÃ£o executadas e a expressÃ£o de atualizaÃ§Ã£o serÃ¡ atualizada. 
+		Novamente a expressÃ£o de teste Ã© avaliada. O processo continua atÃ© que a expressÃ£o de teste seja falsa. 
+		Quando a expressÃ£o de teste Ã© falsa, o loop termina. 
 		
-		Neste caso, temos a variável i, a qual recebe o valor 1. 
-		Deste modo, enquanto i for menor ou igual a 10 (base-dez), o seu valor será incrementado na próxima linha até que a expressão seja avaliada como falsa. 
-		O resultado é apresentado por meio da função printf, que imprime na tela a tabela matemática de multiplicação para um sistema algébrico. */
+		Neste caso, temos a variÃ¡vel i, a qual recebe o valor 1. 
+		Deste modo, enquanto i for menor ou igual a 10 (base-dez), o seu valor serÃ¡ incrementado na prÃ³xima linha atÃ© que a expressÃ£o seja avaliada como falsa. 
+		O resultado Ã© apresentado por meio da funÃ§Ã£o printf, que imprime na tela a tabela matemÃ¡tica de multiplicaÃ§Ã£o para um sistema algÃ©brico. */
 	
 	for(i = 1; i <= 10; ++i){
 		printf("%dx%d = %d\n", i, tabuada, i * tabuada);
 	}
 	
-	/* O comando system("pause") é necessário no ambiente Windows para pausar a tela. 
-		O comando return causa o término da execução do programa. 
-		Se o valor retornado for zero, então isto indica que a execução terminou em condições normais. */
+	/* O comando system("pause") Ã© necessÃ¡rio no ambiente Windows para pausar a tela. 
+		O comando return causa o tÃ©rmino da execuÃ§Ã£o do programa. 
+		Se o valor retornado for zero, entÃ£o isto indica que a execuÃ§Ã£o terminou em condiÃ§Ãµes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da função principal, significa fim do programa. */
+  	/* Chave fechando o corpo da funÃ§Ã£o principal, significa fim do programa. */
 }
