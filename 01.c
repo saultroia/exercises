@@ -1,49 +1,49 @@
-/* Exercício 1: Faça um programa que leia dois
-   números inteiros e imprima a soma. */
+/* ExercÃ­cio 1: FaÃ§a um programa que leia dois
+   nÃºmeros inteiros e imprima a soma. */
 
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificações 
-	externas serão utilizadas. No caso particular, tais especificações se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extensão .h para indicar que se trata de um "header file") em um diretório conhecido pelo compilador. 
-	O nome de tal arquivo é delimitado pelos símbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÃ§Ãµes 
+	externas serÃ£o utilizadas. No caso particular, tais especificaÃ§Ãµes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extensÃ£o .h para indicar que se trata de um "header file" em um diretÃ³rio conhecido pelo compilador. 
+	O nome de tal arquivo Ã© delimitado pelos sÃ­mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* Função principal iniciada em main(), na linha 17. Na linha 18, a função setlocale refere-se à localidade (país/região e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que é usada para definir algumas ou todas as informações 
-	de localidade do mesmo. O idioma usado é o Português padrão. Na linha 19, a declaração de três variáveis do tipo inteiro: a, b e soma. */
+/* FunÃ§Ã£o principal iniciada em main(), na linha 17. Na linha 18, a funÃ§Ã£o setlocale refere-se Ã  localidade (paÃ­s/regiÃ£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que Ã© usada para definir algumas ou todas as informaÃ§Ãµes 
+	de localidade do mesmo. O idioma usado Ã© o PortuguÃªs padrÃ£o. Na linha 19, a declaraÃ§Ã£o de trÃªs variÃ¡veis do tipo inteiro: a, b e soma. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int a, b, soma;
 	
-	/* Solicitação e atribuição de valores às variáveis a e b por meio das funções printf (que traduz a representação interna de variáveis 
-		para a representação ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome das variáveis que devem receber os valores 
-		convertidos a partir dos caracteres do fluxo de entrada. Antes de cada solicitação, usa-se o caractere de nova linha (\n), ou seja, 
-		a próxima saída para a tela acontece na linha seguinte. */
+	/* SolicitaÃ§Ã£o e atribuiÃ§Ã£o de valores Ã s variÃ¡veis a e b por meio das funÃ§Ãµes printf (que traduz a representaÃ§Ã£o interna de variÃ¡veis 
+		para a representaÃ§Ã£o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome das variÃ¡veis que devem receber os valores 
+		convertidos a partir dos caracteres do fluxo de entrada. Antes de cada solicitaÃ§Ã£o, usa-se o caractere de nova linha (\n), ou seja, 
+		a prÃ³xima saÃ­da para a tela acontece na linha seguinte. */
 	
-	printf("\nInforme um número: ");
+	printf("\nInforme um nÃºmero: ");
 	scanf("%d", &a);
-	printf("\nInforme outro número: ");
+	printf("\nInforme outro nÃºmero: ");
 	scanf("%d", &b);
 	
-	/* Operação de adição entre os valores atrubuídos às variáveis a e b. O resultado é atribuído à variável soma. */
+	/* OperaÃ§Ã£o de adiÃ§Ã£o entre os valores atrubuÃ­dos Ã s variÃ¡veis a e b. O resultado Ã© atribuÃ­do Ã  variÃ¡vel soma. */
 
 	soma = a + b;
 	
-	/* Apresentação do resultado por meio da função printf, que imprime na tela os valores atribuídos às variáveis a e b, 
+	/* ApresentaÃ§Ã£o do resultado por meio da funÃ§Ã£o printf, que imprime na tela os valores atribuÃ­dos Ã s variÃ¡veis a e b, 
 		bem como o resultado da soma entre as mesmas. */
 	
-	printf("\nA soma entre %d e %d é %d.\n\n", a, b, soma);
+	printf("\nA soma entre %d e %d Ã© %d.\n\n", a, b, soma);
 	
-	/* O comando system("pause") é necessário no ambiente Windows para pausar a tela. 
-		O comando return causa o término da execução do programa. 
-		Se o valor retornado for zero, então isto indica que a execução terminou em condições normais. */
+	/* O comando system("pause") Ã© necessÃ¡rio no ambiente Windows para pausar a tela. 
+		O comando return causa o tÃ©rmino da execuÃ§Ã£o do programa. 
+		Se o valor retornado for zero, entÃ£o isto indica que a execuÃ§Ã£o terminou em condiÃ§Ãµes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da função principal, significa fim do programa. */
+  	/* Chave fechando o corpo da funÃ§Ã£o principal, significa fim do programa. */
 } 
