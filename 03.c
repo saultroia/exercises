@@ -1,53 +1,53 @@
-/* ExercÌcio 3: Crie um programa que leia um n˙mero inteiro
-   e imprima se ele È par ou Ìmpar. */
+/* Exerc√≠cio 3: Crie um programa que leia um n√∫mero inteiro
+   e imprima se ele √© par ou √≠mpar. */
    
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÁıes 
-	externas ser„o utilizadas. No caso particular, tais especificaÁıes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extens„o .h para indicar que se trata de um "header file") em um diretÛrio conhecido pelo compilador. 
-	O nome de tal arquivo È delimitado pelos sÌmbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especifica√ß√µes 
+	externas ser√£o utilizadas. No caso particular, tais especifica√ß√µes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extens√£o .h para indicar que se trata de um "header file" em um diret√≥rio conhecido pelo compilador. 
+	O nome de tal arquivo √© delimitado pelos s√≠mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* FunÁ„o principal iniciada em main(), na linha 17. Na linha 18, a funÁ„o setlocale refere-se ‡ localidade (paÌs/regi„o e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que È usada para definir algumas ou todas as informaÁıes 
-	de localidade do mesmo. O idioma usado È o PortuguÍs padr„o. Na linha 19, a declaraÁ„o de uma vari·vel do tipo inteiro: num. */
+/* Fun√ß√£o principal iniciada em main(), na linha 17. Na linha 18, a fun√ß√£o setlocale refere-se √† localidade (pa√≠s/regi√£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que √© usada para definir algumas ou todas as informa√ß√µes 
+	de localidade do mesmo. O idioma usado √© o Portugu√™s padr√£o. Na linha 19, a declara√ß√£o de uma vari√°vel do tipo inteiro: num. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int num;
 	
-	/* SolicitaÁ„o e atribuiÁ„o de valor ‡ vari·vel num por meio das funÁıes printf (que traduz a representaÁ„o interna de vari·veis 
-		para a representaÁ„o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari·vel que deve receber o valor 
-		convertido a partir dos caracteres do fluxo de entrada. Antes da solicitaÁ„o, usa-se o caractere de nova linha (\n), ou seja, 
-		a prÛxima saÌda para a tela acontece na linha seguinte. */
+	/* Solicita√ß√£o e atribui√ß√£o de valor √† vari√°vel num por meio das fun√ß√µes printf (que traduz a representa√ß√£o interna de vari√°veis 
+		para a representa√ß√£o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari√°vel que deve receber o valor 
+		convertido a partir dos caracteres do fluxo de entrada. Antes da solicita√ß√£o, usa-se o caractere de nova linha (\n), ou seja, 
+		a pr√≥xima sa√≠da para a tela acontece na linha seguinte. */
 	
-	printf("\nDigite qualquer n˙mero: ");
+	printf("\nDigite qualquer n√∫mero: ");
 	scanf("%d", &num);
 	
-	/* O comando if È utilizado para especificar um bloco de cÛdigo a ser executado se uma condiÁ„o for verdadeira.
-		Usamos a vari·vel num para testar se o resto (%) da divis„o (num / 2) do valor atribuÌdo a ela È igual a 0 (usando o operador ==). 
-		Se a condiÁ„o for verdadeira, imprimimos na tela que "num È um n˙mero par.". */
+	/* O comando if √© utilizado para especificar um bloco de c√≥digo a ser executado se uma condi√ß√£o for verdadeira.
+		Usamos a vari√°vel num para testar se o resto (%) da divis√£o (num / 2) do valor atribu√≠do a ela √© igual a 0 (usando o operador ==). 
+		Se a condi√ß√£o for verdadeira, imprimimos na tela que "num √© um n√∫mero par.". */
 	
 	if(num % 2 == 0){
-		printf("\n%d È um n˙mero par.\n\n", num);
+		printf("\n%d √© um n√∫mero par.\n\n", num);
 	} 
 	
-	/* O comando else È utilizado para especificar um bloco de cÛdigo a ser executado se uma condiÁ„o for falsa.
-		Neste caso, se o resto (%) da divis„o (num / 2) do valor atribuÌdo ‡ vari‡vel num for diferente de 0, imprimimos na tela que "num È um n˙mero Ìmpar.". */
+	/* O comando else √© utilizado para especificar um bloco de c√≥digo a ser executado se uma condi√ß√£o for falsa.
+		Neste caso, se o resto (%) da divis√£o (num / 2) do valor atribu√≠do √† vari√†vel num for diferente de 0, imprimimos na tela que "num √© um n√∫mero √≠mpar.". */
 	
 	else{
-		printf("\n%d È um n˙mero Ìmpar.\n\n", num);
+		printf("\n%d √© um n√∫mero √≠mpar.\n\n", num);
 	}
 	
-	/* O comando system("pause") È necess·rio no ambiente Windows para pausar a tela. 
-		O comando return causa o tÈrmino da execuÁ„o do programa. 
-		Se o valor retornado for zero, ent„o isto indica que a execuÁ„o terminou em condiÁıes normais. */
+	/* O comando system("pause") √© necess√°rio no ambiente Windows para pausar a tela. 
+		O comando return causa o t√©rmino da execu√ß√£o do programa. 
+		Se o valor retornado for zero, ent√£o isto indica que a execu√ß√£o terminou em condi√ß√µes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da funÁ„o principal, significa fim do programa. */
+  	/* Chave fechando o corpo da fun√ß√£o principal, significa fim do programa. */
 }
