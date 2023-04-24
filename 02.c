@@ -1,46 +1,46 @@
-/* ExercÌcio 2: Escreva um programa que calcule
-   e imprima a ·rea de um cÌrculo de raio r. */
+/* Exerc√≠cio 2: Escreva um programa que calcule
+   e imprima a √°rea de um c√≠rculo de raio r. */
    
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÁıes 
-	externas ser„o utilizadas. No caso particular, tais especificaÁıes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extens„o .h para indicar que se trata de um "header file") em um diretÛrio conhecido pelo compilador. 
-	O nome de tal arquivo È delimitado pelos sÌmbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especifica√ß√µes 
+	externas ser√£o utilizadas. No caso particular, tais especifica√ß√µes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extens√£o .h para indicar que se trata de um "header file" em um diret√≥rio conhecido pelo compilador. 
+	O nome de tal arquivo √© delimitado pelos s√≠mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* FunÁ„o principal iniciada em main(), na linha 17. Na linha 18, a funÁ„o setlocale refere-se ‡ localidade (paÌs/regi„o e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que È usada para definir algumas ou todas as informaÁıes 
-	de localidade do mesmo. O idioma usado È o PortuguÍs padr„o. Na linha 19, a declaraÁ„o de trÍs vari·veis do tipo float: r, pi (de valor 3.14) e area. */
+/* Fun√ß√£o principal iniciada em main(), na linha 17. Na linha 18, a fun√ß√£o setlocale refere-se √† localidade (pa√≠s/regi√£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que √© usada para definir algumas ou todas as informa√ß√µes 
+	de localidade do mesmo. O idioma usado √© o Portugu√™s padr√£o. Na linha 19, a declara√ß√£o de tr√™s vari√°veis do tipo float: r, pi (de valor 3.14) e area. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	float r, pi=3.14, area;
 	
-	/* SolicitaÁ„o e atribuiÁ„o de valor ‡ vari·vel r por meio das funÁıes printf (que traduz a representaÁ„o interna de vari·veis 
-		para a representaÁ„o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari·vel que deve receber o valor 
-		convertido a partir dos caracteres do fluxo de entrada. Antes da solicitaÁ„o, usa-se o caractere de nova linha (\n), ou seja, 
-		a prÛxima saÌda para a tela acontece na linha seguinte. */
+	/* Solicita√ß√£o e atribui√ß√£o de valor √† vari√°vel r por meio das fun√ß√µes printf (que traduz a representa√ß√£o interna de vari√°veis 
+		para a representa√ß√£o ASCII para que possa ser apresentada na tela) e scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos) com o caractere "E comercial" (&) antes do nome da vari√°vel que deve receber o valor 
+		convertido a partir dos caracteres do fluxo de entrada. Antes da solicita√ß√£o, usa-se o caractere de nova linha (\n), ou seja, 
+		a pr√≥xima sa√≠da para a tela acontece na linha seguinte. */
 	
 	printf("\nInforme o valor do raio: ");
 	scanf("%f", &r);
 	
-	/* OperaÁ„o na qual o valor da vari·vel area È igual ao valor da vari·vel pi multiplicado duas vezes pelo valor atribuÌdo ‡ vari·vel r. */
+	/* Opera√ß√£o na qual o valor da vari√°vel area √© igual ao valor da vari√°vel pi multiplicado duas vezes pelo valor atribu√≠do √† vari√°vel r. */
 	
 	area = pi * r * r;
 	
-	/* ApresentaÁ„o do resultado por meio da funÁ„o printf, que imprime na tela o valor da vari·vel area. */
+	/* Apresenta√ß√£o do resultado por meio da fun√ß√£o printf, que imprime na tela o valor da vari√°vel area. */
 	
-	printf("\nO valor da ·rea È %.2f.\n\n", area);
+	printf("\nO valor da √°rea √© %.2f.\n\n", area);
 	
-	/* O comando system("pause") È necess·rio no ambiente Windows para pausar a tela. 
-		O comando return causa o tÈrmino da execuÁ„o do programa. 
-		Se o valor retornado for zero, ent„o isto indica que a execuÁ„o terminou em condiÁıes normais. */
+	/* O comando system("pause") √© necess√°rio no ambiente Windows para pausar a tela. 
+		O comando return causa o t√©rmino da execu√ß√£o do programa. 
+		Se o valor retornado for zero, ent√£o isto indica que a execu√ß√£o terminou em condi√ß√µes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da funÁ„o principal, significa fim do programa. */
+  	/* Chave fechando o corpo da fun√ß√£o principal, significa fim do programa. */
 }
