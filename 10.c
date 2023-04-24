@@ -1,47 +1,47 @@
-/* ExercÌcio 10: Escreva um programa que leia o nome e a idade
-   	de uma pessoa e imprima uma mensagem de saudaÁ„o. */
+/* Exerc√≠cio 10: Escreva um programa que leia o nome e a idade
+   	de uma pessoa e imprima uma mensagem de sauda√ß√£o. */
    
-/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especificaÁıes 
-	externas ser„o utilizadas. No caso particular, tais especificaÁıes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
-	arquivo  de extens„o .h para indicar que se trata de um "header file") em um diretÛrio conhecido pelo compilador. 
-	O nome de tal arquivo È delimitado pelos sÌmbolos menor (<) e maior (>). */
+/* Diretivas iniciadas com uma cerquilha (#), seguidas pela palavra reservada include para informar ao compilador que especifica√ß√µes 
+	externas ser√£o utilizadas. No caso particular, tais especifica√ß√µes se encontram nas bibliotecas stdio, stdlib e locale, seguidas de um 
+	arquivo  de extens√£o .h para indicar que se trata de um "header file" em um diret√≥rio conhecido pelo compilador. 
+	O nome de tal arquivo √© delimitado pelos s√≠mbolos menor (<) e maior (>). */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-/* FunÁ„o principal iniciada em main(), na linha 18. Na linha 19, a funÁ„o setlocale refere-se ‡ localidade (paÌs/regi„o e idioma) 
-	para a qual se pode personalizar alguns aspectos do programa, de forma que È usada para definir algumas ou todas as informaÁıes 
-	de localidade do mesmo. O idioma usado È o PortuguÍs padr„o. Na linha 20, a declaraÁ„o de uma vari·vel do tipo char: nome (com capacidade de armazenamento de 50 caracteres). 
-	Na linha 21, a declaraÁ„o de uma vari·vel do tipo int: idade. */
+/* Fun√ß√£o principal iniciada em main(), na linha 18. Na linha 19, a fun√ß√£o setlocale refere-se √† localidade (pa√≠s/regi√£o e idioma) 
+	para a qual se pode personalizar alguns aspectos do programa, de forma que √© usada para definir algumas ou todas as informa√ß√µes 
+	de localidade do mesmo. O idioma usado √© o Portugu√™s padr√£o. Na linha 20, a declara√ß√£o de uma vari√°vel do tipo char: nome (com capacidade de armazenamento de 50 caracteres). 
+	Na linha 21, a declara√ß√£o de uma vari√°vel do tipo int: idade. */
 
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	char nome[50];
 	int idade;
 	
-	/* SolicitaÁ„o e atribuiÁ„o de valores ‡s vari·veis nome e idade por meio das funÁıes printf (que traduz a representaÁ„o interna de vari·veis 
-		para a representaÁ„o ASCII para que possa ser apresentada na tela), scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
-		convertidos e atribuidos aos demais argumentos), com o caractere "E comercial" (&) antes do nome da vari·vel que deve receber o valor 
-		convertido a partir dos caracteres do fluxo de entrada e a funÁ„o gets (que lÍ uma linha de stdin, a armazena na string apontada 
-		e para quando o caractere de nova linha È lido ou quando o fim do arquivo È atingido, o que ocorrer primeiro). */
+	/* Solicita√ß√£o e atribui√ß√£o de valores √†s vari√°veis nome e idade por meio das fun√ß√µes printf (que traduz a representa√ß√£o interna de vari√°veis 
+		para a representa√ß√£o ASCII para que possa ser apresentada na tela), scanf (que opera sobre um fluxo de caracteres oriundo do teclado, 
+		convertidos e atribuidos aos demais argumentos), com o caractere "E comercial" (&) antes do nome da vari√°vel que deve receber o valor 
+		convertido a partir dos caracteres do fluxo de entrada e a fun√ß√£o gets (que l√™ uma linha de stdin, a armazena na string apontada 
+		e para quando o caractere de nova linha √© lido ou quando o fim do arquivo √© atingido, o que ocorrer primeiro). */
 	
 	printf("\nDigite seu nome: ");
 	gets(nome);
 	printf("\nDigite sua idade: ");
 	scanf("%d", &idade);
 	
-		/* SaudaÁ„o impressa na tela ao tÈrmino do fluxo de entrada. */
+		/* Sauda√ß√£o impressa na tela ao t√©rmino do fluxo de entrada. */
 	
-	printf("\nOl· %s! ParabÈns pelos seus %d anos!\nObrigado pela colaboraÁ„o!\n\n", nome, idade);
+	printf("\nOl√° %s! Parab√©ns pelos seus %d anos!\nObrigado pela colabora√ß√£o!\n\n", nome, idade);
 	
-	/* O comando system("pause") È necess·rio no ambiente Windows para pausar a tela. 
-		O comando return causa o tÈrmino da execuÁ„o do programa. 
-		Se o valor retornado for zero, ent„o isto indica que a execuÁ„o terminou em condiÁıes normais. */
+	/* O comando system("pause") √© necess√°rio no ambiente Windows para pausar a tela. 
+		O comando return causa o t√©rmino da execu√ß√£o do programa. 
+		Se o valor retornado for zero, ent√£o isto indica que a execu√ß√£o terminou em condi√ß√µes normais. */
 	
 	system("pause");
   	return 0;
   	
-  	/* Chave fechando o corpo da funÁ„o principal, significa fim do programa. */
+  	/* Chave fechando o corpo da fun√ß√£o principal, significa fim do programa. */
 }
 
