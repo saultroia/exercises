@@ -29,7 +29,7 @@ int main(){
 	printf("\nInforme outro número: ");
 	scanf("%d", &b);
 	
-	/* Operação de adição entre os valores atrubuídos às variáveis a e b. O resultado é atribuído à variável soma. */
+	/* Operação de adição entre os valores atribuídos às variáveis a e b. O resultado é atribuído à variável soma. */
 
 	soma = a + b;
 	
